@@ -8,3 +8,8 @@ Steps to run:
 4. ```./raft3d --raft-id node3 --raft-port 12002 --http-port 8083 --raft-db raft3.db --join 127.0.0.1:8081```
 5. ```uvicorn main:app --reload```
 
+(or)
+
+Run the `start.sh` directly:
+- ```chmod +x start.sh```
+- ```./start.sh```
