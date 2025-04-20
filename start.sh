@@ -28,3 +28,8 @@ echo 'Starting Node 3...';
 ./raft3d --raft-id node3 --raft-port 12002 --http-port 8083 --raft-db raft3.db --join 127.0.0.1:8081;
 exec bash"
 
+# Terminal for FastAPI app
+gnome-terminal --title="API Server" -- bash -c "
+echo 'Starting FastAPI Server...';
+uvicorn main:app --reload;
+exec bash"
