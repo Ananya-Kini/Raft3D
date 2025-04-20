@@ -1,5 +1,14 @@
 #!/bin/bash
 
+echo "Building raft3d from kvstore.go..."
+go build -o raft3d kvstore.go
+
+if [ $? -ne 0 ]; then
+    echo "Build failed. Exiting script."
+    exit 1
+fi
+
+echo "Build successful. Launching nodes and API..."
 
 # Terminal for node1
 gnome-terminal --title="Node 1" -- bash -c "
